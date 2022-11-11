@@ -154,7 +154,8 @@ class CharacterTableViewCell: UITableViewCell {
             height: 17
         )
         
-        setupStatus()
+        setupParameters()
+        makeGrayImage()
     }
     
     override func prepareForReuse() {
@@ -167,7 +168,15 @@ class CharacterTableViewCell: UITableViewCell {
         charImageView.image = nil
     }
     
-    func setupStatus() {
+    func makeGrayImage() {
+        guard let charImage = charImageView.image else {return}
+        if statusLabel.text == "Dead" {
+            charImageView.image = self.convertImageToGrayScale(image: charImage)
+        }
+    }
+    
+    func setupParameters() {
+        
         statusLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 24).isActive = true
         statusLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -24).isActive = true
         statusLabel.heightAnchor.constraint(equalToConstant: 25).isActive = true
@@ -187,6 +196,20 @@ class CharacterTableViewCell: UITableViewCell {
             statusLabel.widthAnchor.constraint(equalToConstant: 92).isActive = true
         }
     }
+
+    
+    func convertImageToGrayScale(image: UIImage) -> UIImage {
+      let imageRect = CGRect(x: 0, y: 0,width: image.size.width, height : image.size.height)
+      let colorSpace = CGColorSpaceCreateDeviceGray()
+        
+      let context = CGContext(data: nil, width: Int(image.size.width), height: Int(image.size.height), bitsPerComponent: 8, bytesPerRow: 0, space: colorSpace, bitmapInfo: CGImageAlphaInfo.none.rawValue)
+      context?.draw(image.cgImage!, in: imageRect)
+
+      let imageRef = context!.makeImage()
+      let newImage = UIImage(cgImage: imageRef!)
+        
+      return newImage
+  }
     
     func configure(with characterModel: CharacterTableViewCellModel){
         nameLabel.text = characterModel.name
