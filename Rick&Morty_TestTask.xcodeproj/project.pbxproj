@@ -13,6 +13,10 @@
 		CEC27FA7291D65A200B6E9D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEC27FA5291D65A200B6E9D9 /* Main.storyboard */; };
 		CEC27FA9291D65A400B6E9D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEC27FA8291D65A400B6E9D9 /* Assets.xcassets */; };
 		CEC27FAC291D65A400B6E9D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEC27FAA291D65A400B6E9D9 /* LaunchScreen.storyboard */; };
+		CEC27FB5291D680F00B6E9D9 /* APIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC27FB4291D680F00B6E9D9 /* APIModel.swift */; };
+		CEC27FB8291D6B6600B6E9D9 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC27FB7291D6B6600B6E9D9 /* NetworkManager.swift */; };
+		CEC27FBC291D742B00B6E9D9 /* CellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC27FBB291D742B00B6E9D9 /* CellModel.swift */; };
+		CEC27FBE291D772D00B6E9D9 /* CharacterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC27FBD291D772D00B6E9D9 /* CharacterTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		CEC27FA8291D65A400B6E9D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEC27FAB291D65A400B6E9D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEC27FAD291D65A400B6E9D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEC27FB4291D680F00B6E9D9 /* APIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIModel.swift; sourceTree = "<group>"; };
+		CEC27FB7291D6B6600B6E9D9 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		CEC27FBB291D742B00B6E9D9 /* CellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellModel.swift; sourceTree = "<group>"; };
+		CEC27FBD291D772D00B6E9D9 /* CharacterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,59 @@
 		CEC27F9E291D65A200B6E9D9 /* Rick&Morty_TestTask */ = {
 			isa = PBXGroup;
 			children = (
-				CEC27F9F291D65A200B6E9D9 /* AppDelegate.swift */,
-				CEC27FA1291D65A200B6E9D9 /* SceneDelegate.swift */,
+				CEC27FBF291E3B7100B6E9D9 /* Application */,
+				CEC27FC0291E3BAC00B6E9D9 /* Resources */,
+				CEC27FC1291E3D0900B6E9D9 /* View */,
+				CEC27FB6291D6B3800B6E9D9 /* NetworkService */,
+				CEC27FB3291D67FC00B6E9D9 /* Model */,
 				CEC27FA3291D65A200B6E9D9 /* ViewController.swift */,
 				CEC27FA5291D65A200B6E9D9 /* Main.storyboard */,
-				CEC27FA8291D65A400B6E9D9 /* Assets.xcassets */,
 				CEC27FAA291D65A400B6E9D9 /* LaunchScreen.storyboard */,
-				CEC27FAD291D65A400B6E9D9 /* Info.plist */,
 			);
 			path = "Rick&Morty_TestTask";
+			sourceTree = "<group>";
+		};
+		CEC27FB3291D67FC00B6E9D9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CEC27FB4291D680F00B6E9D9 /* APIModel.swift */,
+				CEC27FBB291D742B00B6E9D9 /* CellModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CEC27FB6291D6B3800B6E9D9 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				CEC27FB7291D6B6600B6E9D9 /* NetworkManager.swift */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		CEC27FBF291E3B7100B6E9D9 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				CEC27FA1291D65A200B6E9D9 /* SceneDelegate.swift */,
+				CEC27F9F291D65A200B6E9D9 /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		CEC27FC0291E3BAC00B6E9D9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CEC27FA8291D65A400B6E9D9 /* Assets.xcassets */,
+				CEC27FAD291D65A400B6E9D9 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CEC27FC1291E3D0900B6E9D9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CEC27FBD291D772D00B6E9D9 /* CharacterTableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +190,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEC27FB5291D680F00B6E9D9 /* APIModel.swift in Sources */,
+				CEC27FBE291D772D00B6E9D9 /* CharacterTableViewCell.swift in Sources */,
 				CEC27FA4291D65A200B6E9D9 /* ViewController.swift in Sources */,
+				CEC27FB8291D6B6600B6E9D9 /* NetworkManager.swift in Sources */,
 				CEC27FA0291D65A200B6E9D9 /* AppDelegate.swift in Sources */,
 				CEC27FA2291D65A200B6E9D9 /* SceneDelegate.swift in Sources */,
+				CEC27FBC291D742B00B6E9D9 /* CellModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,7 +347,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7PAYMRGF6V;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Rick&Morty_TestTask/Info.plist";
+				INFOPLIST_FILE = "Rick&Morty_TestTask/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -319,7 +375,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7PAYMRGF6V;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Rick&Morty_TestTask/Info.plist";
+				INFOPLIST_FILE = "Rick&Morty_TestTask/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
